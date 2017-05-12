@@ -1,9 +1,13 @@
+/* from codewar.com, given a N = m*n matrix, you want to find its permutaion, i.e. how many ways to arrange N elements to form different matrixes. form combinatronics, the answer should be N! / (n1! * n2! ...), where n1, n2, ... are the number of appearances in the matrix. 
+
+*/
+
 function countPerms(matrix) {
-  var amountDiffMatrices = factorial(matrix.length * matrix[0].length);
+  var amountDiffMatrices = factorial(matrix[0].length * matrix.length);
   var divisor = 1;
-  var numToAppear = {};
-  for(var i=0;i<matrix.length;i++){
-    for(var j=0;j<matrix[i].length;j++){
+  var numToAppear = {};  // creaate a map to map element to its occurance
+  for(var i = 0;i < matrix.length;i++){
+    for(var j = 0;j < matrix[i].length;j++){
         var ele = matrix[i][j];
         if(numToAppear[ele]){
           numToAppear[ele]++;
