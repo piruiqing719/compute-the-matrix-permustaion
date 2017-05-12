@@ -1,0 +1,27 @@
+function countPerms(matrix) {
+  var amountDiffMatrices = factorial(matrix.length * matrix[0].length);
+  var divisor = 1;
+  var numToAppear = {};
+  for(var i=0;i<matrix.length;i++){
+    for(var j=0;j<matrix[i].length;j++){
+        var ele = matrix[i][j];
+        if(numToAppear[ele]){
+          numToAppear[ele]++;
+        }
+        else{
+          numToAppear[ele] = 1;
+        }
+      }
+    }
+  for(var i in numToAppear){
+      divisor *= factorial(numToAppear[i]);
+  }
+  return amountDiffMatrices / divisor;
+}
+
+function factorial(num){
+  if(num < 2)
+    return 1;
+  else
+    return num * factorial(num - 1);
+}
