@@ -1,4 +1,5 @@
-/* from codewar.com, given a N = m*n matrix, you want to find its permutaion, i.e. how many ways to arrange N elements to form different matrixes. form combinatronics, the answer should be N! / (n1! * n2! ...), where n1, n2, ... are the number of appearances in the matrix. 
+/* from codewar.com, given a N = m*n matrix, you want to find its permutaion, i.e. 
+how many ways to arrange N elements to form different matrixes. form combinatronics, the answer should be N! / (n1! * n2! ...), where n1, n2, ... are the number of appearances in the matrix. 
 
 */
 
